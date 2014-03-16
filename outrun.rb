@@ -1,4 +1,4 @@
-def load_graph(src_file)
+def load_tree(src_file)
   # Reads the source file line by line and returns
   # an array of arrays of integers. Example:
   # [
@@ -46,9 +46,9 @@ def find_most_popular_route(tree)
   previous_row.max
 end
 
-ARGV.each do |a|
-  my_graph = load_graph(a)
-  pop_route_total = find_most_popular_route(my_graph)
+ARGV.each do |filename|
+  numtree = load_tree(filename)
+  pop_route_total = find_most_popular_route(numtree)
   print "\n"
   print pop_route_total
 end
